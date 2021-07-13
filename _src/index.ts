@@ -59,7 +59,7 @@ class RedisSMQ extends EventEmitter {
 		opts.options.host = opts.host;
 		opts.options.port = opts.port;
 		// Pass tls options to redis. This can be as simple as tls: {} in options
-		if (options.options.tls) {
+		if (options.options && options.options.tls) {
 			opts.tls = options.options.tls;
 		}
 		this.realtime = opts.realtime;

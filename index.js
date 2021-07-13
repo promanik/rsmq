@@ -515,7 +515,7 @@ class RedisSMQ extends EventEmitter {
         }, options);
         opts.options.host = opts.host;
         opts.options.port = opts.port;
-        if (options.options.tls) {
+        if (options.options && options.options.tls) {
             opts.tls = options.options.tls;
         }
         this.realtime = opts.realtime;
